@@ -10,9 +10,7 @@
                     <!-- Authentication card start -->
                     <form method="POST" action="/forget-password" class="md-float-material form-material">
                         @csrf
-                        <div class="text-center">
-                            <img src="{{URL::to('assets/files/assets/images/logo.png')}}" alt="logo.png">
-                        </div>
+
                         <div class="auth-box card">
                             <div class="card-block">
                                 <div class="row m-b-20">
@@ -25,7 +23,7 @@
                                         @endif
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group form-primary">
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" autofocus placeholder="Your Email Address" required>
                                     @error('email')
